@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Navbar from "./Navbar";
 import UploadFile from "./UploadFile";
 import AdminHome from "./AdminHome";
+import ManageContent from "./ManageContent";
 
 function AdminLayout() {
   const [currentSection, setCurrentSection] = useState("home");
@@ -11,7 +12,7 @@ function AdminLayout() {
       case "upload":
         return <UploadFile />;
       case "manage":
-        return <div style={sectionStyle}>Manage Content (Coming Soon)</div>;
+        return <ManageContent />;
       default:
         return <AdminHome />; // Render AdminHome as the default
     }
